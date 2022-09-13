@@ -22,7 +22,7 @@ SWITCH SCIENCEさんの[丸ピンヘッダ](https://www.switch-science.com/catalog/93/)な
 ### ソフトウェア設定
 1,Circuit python書き込み<br>
  Itsy Bitsyに[Circuit python 7.3x](https://circuitpython.org/board/adafruit_itsybitsy_rp2040/)のuf2を書き込みます。<br>
- (このあたり)[https://mag.switch-science.com/2017/08/30/circuitpython/]を参考に書き込みます。<br>
+ [このあたり](https://mag.switch-science.com/2017/08/30/circuitpython/)を参考に書き込みます。<br>
 2.HIDライブラリの格納<br>
  Itsy Bitsyのlibフォルダ以下に[adafruitのHID](https://docs.circuitpython.org/projects/hid/en/latest/)ライブラリを格納します。<br>
 3.code.pyを格納します。<br>
