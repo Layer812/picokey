@@ -1,7 +1,7 @@
 # picokey
 Raspberry PICOの一種である[Itsy Bitsy RP2040](https://www.switch-science.com/catalog/7900/)を用いたUSB HIDデバイスです。<br>
 GPIOよりキー入力を読み取り、定義したキーマップに従いUSB経由でPC/Raspberry Pi等にキーコードを送ります。<br>
-現状、GPIOの接続先として[TRS-80 Model 100](https://www.massmadesoul.com/features/trs80)のみ対応しています。<br>TR
+現状、GPIOの接続先として[TRS-80 Model 100](https://www.massmadesoul.com/features/trs80)のみ対応しています。<br>
 ![TRS-80](https://pbs.twimg.com/media/Fba1VRAaUAMzxSJ?format=png&name=small)
 
 ## 作り方
@@ -21,7 +21,7 @@ GPIOよりキー入力を読み取り、定義したキーマップに従いUSB�
 SWITCH SCIENCEさんの[丸ピンヘッダ](https://www.switch-science.com/catalog/93/)なら行ける気がします。<br>
 
 ### ソフトウェア設定
-1,Circuit python書き込み<br>
+1.Circuit python書き込み<br>
  Itsy Bitsyに[Circuit python 7.3x](https://circuitpython.org/board/adafruit_itsybitsy_rp2040/)のuf2を書き込みます。<br>
  [このあたり](https://mag.switch-science.com/2017/08/30/circuitpython/)を参考に書き込みます。<br>
 2.HIDライブラリの格納<br>
