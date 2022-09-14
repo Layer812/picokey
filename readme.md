@@ -1,46 +1,47 @@
 # picokey
-Raspberry PICO‚Ìˆêí‚Å‚ ‚é[Itsy Bitsy RP2040](https://www.switch-science.com/catalog/7900/)‚ğ—p‚¢‚½USB HIDƒfƒoƒCƒX‚Å‚·B<br>
-GPIO‚æ‚èƒL[“ü—Í‚ğ“Ç‚İæ‚èA’è‹`‚µ‚½ƒL[ƒ}ƒbƒv‚É]‚¢USBŒo—R‚ÅPC/Raspberry Pi“™‚ÉƒL[ƒR[ƒh‚ğ‘—‚è‚Ü‚·B<br>
-Œ»óAGPIO‚ÌÚ‘±æ‚Æ‚µ‚Ä[TRS-80 Model 100](https://www.massmadesoul.com/features/trs80)‚Ì‚İ‘Î‰‚µ‚Ä‚¢‚Ü‚·B<br>
+Raspberry PICOã®ä¸€ç¨®ã§ã‚ã‚‹[Itsy Bitsy RP2040](https://www.switch-science.com/catalog/7900/)ã‚’ç”¨ã„ãŸUSB HIDãƒ‡ãƒã‚¤ã‚¹ã§ã™ã€‚<br>
+GPIOã‚ˆã‚Šã‚­ãƒ¼å…¥åŠ›ã‚’èª­ã¿å–ã‚Šã€å®šç¾©ã—ãŸã‚­ãƒ¼ãƒãƒƒãƒ—ã«å¾“ã„USBçµŒç”±ã§PC/Raspberry Piç­‰ã«ã‚­ãƒ¼ã‚³ãƒ¼ãƒ‰ã‚’é€ã‚Šã¾ã™ã€‚<br>
+ç¾çŠ¶ã€GPIOã®æ¥ç¶šå…ˆã¨ã—ã¦[TRS-80 Model 100](https://www.massmadesoul.com/features/trs80)ã®ã¿å¯¾å¿œã—ã¦ã„ã¾ã™ã€‚<br>TR
+![TRS-80](https://pbs.twimg.com/media/Fba1VRAaUAMzxSJ?format=png&name=small)
 
-## ì‚è•û
-### g‚¤‚à‚Ì
- - [Itsy Bitsy RP2040](https://www.switch-science.com/catalog/7900/) 1ŒÂ
- - ƒWƒƒƒ“ƒpü(ƒIƒX-ƒƒX)“K‹X
- - USBƒP[ƒuƒ‹(Micro - Type A)
+## ä½œã‚Šæ–¹
+### ä½¿ã†ã‚‚ã®
+ - [Itsy Bitsy RP2040](https://www.switch-science.com/catalog/7900/) 1å€‹
+ - ã‚¸ãƒ£ãƒ³ãƒ‘ç·š(ã‚ªã‚¹-ãƒ¡ã‚¹)é©å®œ
+ - USBã‚±ãƒ¼ãƒ–ãƒ«(Micro - Type A)
 
-### ƒn[ƒhƒEƒFƒAÚ‘±
-1.TRS-80‚Ì— ŠW‚ğ‚ ‚¯AƒƒCƒ“ƒ†ƒjƒbƒg‚ğæ‚èŠO‚µ‚Ü‚·B<br>
- [‚±‚Ì‚ ‚½‚è‚Ì“®‰æ](https://www.youtube.com/watch?v=hbLWk7ir9sI)‚ğQl‚ÉAƒƒCƒ“ƒ†ƒjƒbƒg‚ğŠO‚µ‚Ü‚·B<br>
-ƒL[ƒ{[ƒhŠî”Õ‚Ì¶‘¤‚É‚ ‚éƒL[ƒ{[ƒhƒP[ƒuƒ‹(•10–{A”’10–{)‚ğŸ‚ÌH’ö‚Åg‚¢‚Ü‚·B<br>
-2.ƒL[ƒ{[ƒhƒP[ƒuƒ‹‚ÆItsy Bitsy‚ğÚ‘±‚µ‚Ü‚·B<br>
-ˆÈ‰º‚Ì‚æ‚¤‚É‡Œv17–{‚ÌƒP[ƒuƒ‹‚ğItsy Bitsy‚ÉÚ‘±‚µ‚Ü‚·B<br>
-![ƒL[ƒ{[ƒhÚ‘±}](https://user-images.githubusercontent.com/111331376/189836293-7701fa93-ca99-415a-8890-32104d5d2494.png)
-ƒWƒƒƒ“ƒpü‚Í×‚¢‚Ì‚ÅƒRƒlƒNƒ^‚Éh‚³‚è‚Ü‚·‚ªAItsy Bitsy‚Ìƒsƒ“ƒwƒbƒ_‚ğ‚»‚Ì‚Ü‚Ü‚³‚·ê‡‚ÍA<br>
-SWITCH SCIENCE‚³‚ñ‚Ì[ŠÛƒsƒ“ƒwƒbƒ_](https://www.switch-science.com/catalog/93/)‚È‚çs‚¯‚é‹C‚ª‚µ‚Ü‚·B<br>
+### ãƒãƒ¼ãƒ‰ã‚¦ã‚§ã‚¢æ¥ç¶š
+1.TRS-80ã®è£è“‹ã‚’ã‚ã‘ã€ãƒ¡ã‚¤ãƒ³ãƒ¦ãƒ‹ãƒƒãƒˆã‚’å–ã‚Šå¤–ã—ã¾ã™ã€‚<br>
+ [ã“ã®ã‚ãŸã‚Šã®å‹•ç”»](https://www.youtube.com/watch?v=hbLWk7ir9sI)ã‚’å‚è€ƒã«ã€ãƒ¡ã‚¤ãƒ³ãƒ¦ãƒ‹ãƒƒãƒˆã‚’å¤–ã—ã¾ã™ã€‚<br>
+ã‚­ãƒ¼ãƒœãƒ¼ãƒ‰åŸºç›¤ã®å·¦å´ã«ã‚ã‚‹ã‚­ãƒ¼ãƒœãƒ¼ãƒ‰ã‚±ãƒ¼ãƒ–ãƒ«(é»’10æœ¬ã€ç™½10æœ¬)ã‚’æ¬¡ã®å·¥ç¨‹ã§ä½¿ã„ã¾ã™ã€‚<br>
+2.ã‚­ãƒ¼ãƒœãƒ¼ãƒ‰ã‚±ãƒ¼ãƒ–ãƒ«ã¨Itsy Bitsyã‚’æ¥ç¶šã—ã¾ã™ã€‚<br>
+ä»¥ä¸‹ã®ã‚ˆã†ã«åˆè¨ˆ17æœ¬ã®ã‚±ãƒ¼ãƒ–ãƒ«ã‚’Itsy Bitsyã«æ¥ç¶šã—ã¾ã™ã€‚<br>
+![ã‚­ãƒ¼ãƒœãƒ¼ãƒ‰æ¥ç¶šå›³](https://user-images.githubusercontent.com/111331376/189836293-7701fa93-ca99-415a-8890-32104d5d2494.png)
+ã‚¸ãƒ£ãƒ³ãƒ‘ç·šã¯ç´°ã„ã®ã§ã‚³ãƒã‚¯ã‚¿ã«åˆºã•ã‚Šã¾ã™ãŒã€Itsy Bitsyã®ãƒ”ãƒ³ãƒ˜ãƒƒãƒ€ã‚’ãã®ã¾ã¾ã•ã™å ´åˆã¯ã€<br>
+SWITCH SCIENCEã•ã‚“ã®[ä¸¸ãƒ”ãƒ³ãƒ˜ãƒƒãƒ€](https://www.switch-science.com/catalog/93/)ãªã‚‰è¡Œã‘ã‚‹æ°—ãŒã—ã¾ã™ã€‚<br>
 
-### ƒ\ƒtƒgƒEƒFƒAİ’è
-1,Circuit python‘‚«‚İ<br>
- Itsy Bitsy‚É[Circuit python 7.3x](https://circuitpython.org/board/adafruit_itsybitsy_rp2040/)‚Ìuf2‚ğ‘‚«‚İ‚Ü‚·B<br>
- [‚±‚Ì‚ ‚½‚è](https://mag.switch-science.com/2017/08/30/circuitpython/)‚ğQl‚É‘‚«‚İ‚Ü‚·B<br>
-2.HIDƒ‰ƒCƒuƒ‰ƒŠ‚ÌŠi”[<br>
- Itsy Bitsy‚ÌlibƒtƒHƒ‹ƒ_ˆÈ‰º‚É[adafruit‚ÌHID](https://docs.circuitpython.org/projects/hid/en/latest/)ƒ‰ƒCƒuƒ‰ƒŠ‚ğŠi”[‚µ‚Ü‚·B<br>
-3.code.py‚ğŠi”[‚µ‚Ü‚·B<br>
- Thonny‚ğ‚Â‚©‚¤‚Æ•Ö—˜‚Å‚·B<br>
+### ã‚½ãƒ•ãƒˆã‚¦ã‚§ã‚¢è¨­å®š
+1,Circuit pythonæ›¸ãè¾¼ã¿<br>
+ Itsy Bitsyã«[Circuit python 7.3x](https://circuitpython.org/board/adafruit_itsybitsy_rp2040/)ã®uf2ã‚’æ›¸ãè¾¼ã¿ã¾ã™ã€‚<br>
+ [ã“ã®ã‚ãŸã‚Š](https://mag.switch-science.com/2017/08/30/circuitpython/)ã‚’å‚è€ƒã«æ›¸ãè¾¼ã¿ã¾ã™ã€‚<br>
+2.HIDãƒ©ã‚¤ãƒ–ãƒ©ãƒªã®æ ¼ç´<br>
+ Itsy Bitsyã®libãƒ•ã‚©ãƒ«ãƒ€ä»¥ä¸‹ã«[adafruitã®HID](https://docs.circuitpython.org/projects/hid/en/latest/)ãƒ©ã‚¤ãƒ–ãƒ©ãƒªã‚’æ ¼ç´ã—ã¾ã™ã€‚<br>
+3.code.pyã‚’æ ¼ç´ã—ã¾ã™ã€‚<br>
+ Thonnyã‚’ã¤ã‹ã†ã¨ä¾¿åˆ©ã§ã™ã€‚<br>
 
-### ‚Â‚È‚¬•û
- Itsy Bitsy‚ÆPC/Raspberry PI‚ğUSBƒP[ƒuƒ‹‚ÅŒq‚¬‚Ü‚·B<br>
- Itsy Bitsy‚Í‹N“®‚·‚é‚ÆLED‚ª“_–Å‚µ‚Ü‚·B<br>
+### ã¤ãªãæ–¹
+ Itsy Bitsyã¨PC/Raspberry PIã‚’USBã‚±ãƒ¼ãƒ–ãƒ«ã§ç¹‹ãã¾ã™ã€‚<br>
+ Itsy Bitsyã¯èµ·å‹•ã™ã‚‹ã¨LEDãŒç‚¹æ»…ã—ã¾ã™ã€‚<br>
 
-## §ŒÀ
- - ƒL[ƒR[ƒh‘S‚Ä‚É‚Í‘Î‰‚µ‚Ä‚¢‚Ü‚¹‚ñ‚ªAKeymap‚ğC³‚·‚ê‚ÎD‚«‚ÈƒL[‚ğƒAƒTƒCƒ“‚Å‚«‚Ü‚·B<br>
- - unixg‚¤‚É¢‚éƒL[‚ÍˆÈ‰º‚Ì‚æ‚¤‚É‘Î‰‚µ‚Ü‚µ‚½B<br>
-![ƒL[‚Ì’u‚«Š·‚¦](https://user-images.githubusercontent.com/111331376/189951347-d1f18aec-eae9-4343-bec5-dcef67f46222.png)
+## åˆ¶é™
+ - ã‚­ãƒ¼ã‚³ãƒ¼ãƒ‰å…¨ã¦ã«ã¯å¯¾å¿œã—ã¦ã„ã¾ã›ã‚“ãŒã€Keymapã‚’ä¿®æ­£ã™ã‚Œã°å¥½ããªã‚­ãƒ¼ã‚’ã‚¢ã‚µã‚¤ãƒ³ã§ãã¾ã™ã€‚<br>
+ - unixä½¿ã†æ™‚ã«å›°ã‚‹ã‚­ãƒ¼ã¯ä»¥ä¸‹ã®ã‚ˆã†ã«å¯¾å¿œã—ã¾ã—ãŸã€‚<br>
+![ã‚­ãƒ¼ã®ç½®ãæ›ãˆ](https://user-images.githubusercontent.com/111331376/189951347-d1f18aec-eae9-4343-bec5-dcef67f46222.png)
 
 ## Thanks to
- - [Final build of the Pine A64 TRS-80 Model 100](https://fadsihave.wordpress.com/) TRS‰ü‘¢Œ³‘cAƒL[ƒ}ƒbƒvQl‚É‚È‚è‚Ü‚µ‚½B
- - [SWITCH SCIENCE](https://www.switch-science.com/) Šy‚µ‚¢•”•i‚ªˆÀ‚­‘‚­è‚É“Í‚­‚Ì‚ÅA‘åD‚«B
- - [RaspberryPiƒNƒbƒNƒuƒbƒN](https://www.denshi.club/parts/) à–¾•ª‚©‚è‚â‚·‚­‚Ä•‚©‚è‚Ü‚µ‚½B
+ - [Final build of the Pine A64 TRS-80 Model 100](https://fadsihave.wordpress.com/) TRSæ”¹é€ å…ƒç¥–ã€ã‚­ãƒ¼ãƒãƒƒãƒ—å‚è€ƒã«ãªã‚Šã¾ã—ãŸã€‚
+ - [SWITCH SCIENCE](https://www.switch-science.com/) æ¥½ã—ã„éƒ¨å“ãŒå®‰ãæ—©ãæ‰‹ã«å±Šãã®ã§ã€å¤§å¥½ãã€‚
+ - [RaspberryPiã‚¯ãƒƒã‚¯ãƒ–ãƒƒã‚¯](https://www.denshi.club/parts/) èª¬æ˜åˆ†ã‹ã‚Šã‚„ã™ãã¦åŠ©ã‹ã‚Šã¾ã—ãŸã€‚
 
-## ƒ‰ƒCƒZƒ“ƒX
- [Apache License v2.0](http://www.apache.org/licenses/LICENSE-2.0)‚ÉŠî‚Ã‚¢‚Ä‚²—˜—p‚­‚¾‚³‚¢B‚²˜A—‚Í[layer8](https://twitter.com/layer812)‚Ü‚Å‚¨Šè‚¢‚µ‚Ü‚·B
+## ãƒ©ã‚¤ã‚»ãƒ³ã‚¹
+ [Apache License v2.0](http://www.apache.org/licenses/LICENSE-2.0)ã«åŸºã¥ã„ã¦ã”åˆ©ç”¨ãã ã•ã„ã€‚ã”é€£çµ¡ã¯[layer8](https://twitter.com/layer812)ã¾ã§ãŠé¡˜ã„ã—ã¾ã™ã€‚
