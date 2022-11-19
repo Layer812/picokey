@@ -5,12 +5,14 @@ import board, digitalio, usb_hid, os, time
 from adafruit_hid.keyboard import Keyboard
 from adafruit_hid.keycode import Keycode
 
-#ƒL[ƒXƒLƒƒƒ“ŠÔŠu(•b)’Z‚¢‚Æƒ`ƒƒƒ^ƒŠƒ“ƒO‚µ‚Ü‚·B
-Keyscaninterval=0.1
+#ã‚­ãƒ¼ã‚¹ã‚­ãƒ£ãƒ³é–“éš”(ç§’)
+Keyscaninterval=0.01
 
-#ƒ}ƒgƒŠƒNƒXƒL[“Ç‚Ýž‚Ýƒ‹[ƒ`ƒ“
+#ãƒžãƒˆãƒªã‚¯ã‚¹ã‚­ãƒ¼èª­ã¿è¾¼ã¿ãƒ«ãƒ¼ãƒãƒ³
 def mtxkeys(rows, cols, keymap):
     pressed = []
+    retkey = []
+    i=0
     for row in rows:
         row.direction = digitalio.Direction.OUTPUT
         row.value = True
@@ -21,9 +23,18 @@ def mtxkeys(rows, cols, keymap):
                     pressed.append(key)
         row.value = False
         row.direction = digitalio.Direction.INPUT
-    return pressed
+    for key in pressed:
+        if key == Keycode.B or key == Keycode.G or key == Keycode.T or key == Keycode.QUOTE or key == 83:
+            i += ((key-Keycode.B+1)*2)
+        else:
+            retkey.append(key)
+    if i == 148: retkey.append(Keycode.B)
+    if i == 14: retkey.append(Keycode.G)
+    if i == 40: retkey.append(Keycode.T)
+    if i == 98: retkey.append(Keycode.QUOTE)
+    return retkey
 
-#TRS-80‚ÌƒL[ƒ}ƒbƒv
+#TRS-80ã®ã‚­ãƒ¼ãƒžãƒƒãƒ—
 keymap=(
 	(Keycode.Z,	Keycode.A,	Keycode.Q,	Keycode.O,		Keycode.ONE,	Keycode.NINE,		Keycode.SPACEBAR,	Keycode.F1,	Keycode.LEFT_SHIFT),
 	(Keycode.X,	Keycode.S,	Keycode.W,	Keycode.P,		Keycode.TWO,	Keycode.ZERO,		Keycode.BACKSPACE,	Keycode.F2,	Keycode.LEFT_CONTROL),
@@ -35,7 +46,7 @@ keymap=(
 	(Keycode.L,	Keycode.K,	Keycode.I,	Keycode.FORWARD_SLASH,	Keycode.EIGHT,	Keycode.DOWN_ARROW,	Keycode.ENTER,		Keycode.F8,	Keycode.RIGHT_BRACKET)
 )
 
-#¡‚Ì‚Æ‚±‚ë‚ÍItsyBitsy RP2040‚¾‚¯ƒTƒ|[ƒg
+#ä»Šã®ã¨ã“ã‚ã¯ItsyBitsy RP2040ã ã‘ã‚µãƒãƒ¼ãƒˆ
 board_type = os.uname().machine
 if 'ItsyBitsy RP2040' in board_type:
     rows = [digitalio.DigitalInOut(x) for x in (board.D11,	board.D10,	board.D9,	board.D7,	board.D5,	board.SDA,	board.SCL,	board.TX)]
@@ -44,17 +55,26 @@ else:
     print("Request me to support your board!")
     exit
 
-#GPIO‚Ì‰Šú‰»
+#GPIOã®åˆæœŸåŒ–
 for pin in rows + cols:
     pin.direction = digitalio.Direction.INPUT
     pin.pull = digitalio.Pull.DOWN
 
-#HID USB Keyboard‚Ì‰Šú‰»
+#HID USB Keyboardã®åˆæœŸåŒ–
 usbkey =  Keyboard(usb_hid.devices)
-
-#“Ç‚ß‚½ƒL[‚ðUSBŒo—R‚Å‘—‚éƒƒCƒ“
+#èª­ã‚ãŸã‚­ãƒ¼ã‚’USBçµŒç”±ã§é€ã‚‹ãƒ¡ã‚¤ãƒ³
+pkeys=[]
+i=0
 while True:
     keys = mtxkeys(rows, cols, keymap)
-    if keys:
+    if keys and keys != pkeys:
         usbkey.send(*keys)
+        i=0
+    else:
+        i=i+1
+    if i > 10:
+        pkeys=[]
+        i=0
+    else:
+        pkeys=keys
     time.sleep(Keyscaninterval)
