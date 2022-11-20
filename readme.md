@@ -16,7 +16,7 @@ GPIOよりキー入力を読み取り、定義したキーマップに従いUSB�
 キーボード基盤の左側にあるキーボードケーブル(黒10本、白10本)を次の工程で使います。<br>
 2.キーボードケーブルとItsy Bitsyを接続します。<br>
 以下のように合計17本のケーブルをItsy Bitsyに接続します。<br>
-![キーボード接続図](https://user-images.githubusercontent.com/111331376/189836293-7701fa93-ca99-415a-8890-32104d5d2494.png)
+![キーボード接続図](https://user-images.githubusercontent.com/111331376/202908513-b93e8622-984f-4f2c-a10a-582e4e57348c.png)
 ジャンパ線は細いのでコネクタに刺さりますが、Itsy Bitsyのピンヘッダをそのままさす場合は、<br>
 SWITCH SCIENCEさんの[丸ピンヘッダ](https://www.switch-science.com/catalog/93/)なら行ける気がします。<br>
 
