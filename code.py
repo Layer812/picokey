@@ -6,12 +6,11 @@ from adafruit_hid.keyboard import Keyboard
 from adafruit_hid.keycode import Keycode
 
 #キースキャン間隔(秒)
-Keyscaninterval=0.01
+Keyscaninterval=0.02
 
 #マトリクスキー読み込みルーチン
 def mtxkeys(rows, cols, keymap):
     pressed = []
-    retkey = []
     i=0
     for row in rows:
         row.direction = digitalio.Direction.OUTPUT
@@ -23,16 +22,7 @@ def mtxkeys(rows, cols, keymap):
                     pressed.append(key)
         row.value = False
         row.direction = digitalio.Direction.INPUT
-    for key in pressed:
-        if key == Keycode.B or key == Keycode.G or key == Keycode.T or key == Keycode.QUOTE or key == 83:
-            i += ((key-Keycode.B+1)*2)
-        else:
-            retkey.append(key)
-    if i == 148: retkey.append(Keycode.B)
-    if i == 14: retkey.append(Keycode.G)
-    if i == 40: retkey.append(Keycode.T)
-    if i == 98: retkey.append(Keycode.QUOTE)
-    return retkey
+    return pressed
 
 #TRS-80のキーマップ
 keymap=(
@@ -49,7 +39,7 @@ keymap=(
 #今のところはItsyBitsy RP2040だけサポート
 board_type = os.uname().machine
 if 'ItsyBitsy RP2040' in board_type:
-    rows = [digitalio.DigitalInOut(x) for x in (board.D11,	board.D10,	board.D9,	board.D7,	board.D5,	board.SDA,	board.SCL,	board.TX)]
+    rows = [digitalio.DigitalInOut(x) for x in (board.D12,	board.D11,	board.D10,	board.D9,	board.D7,	board.SDA,	board.SCL,	board.TX)]
     cols = [digitalio.DigitalInOut(x) for x in (board.A0,	board.A1,	board.A2,	board.A3,	board.D24,	board.D25,	board.SCK,	board.MOSI,	board.MISO)]
 else:
     print("Request me to support your board!")
@@ -59,7 +49,6 @@ else:
 for pin in rows + cols:
     pin.direction = digitalio.Direction.INPUT
     pin.pull = digitalio.Pull.DOWN
-
 #HID USB Keyboardの初期化
 usbkey =  Keyboard(usb_hid.devices)
 #読めたキーをUSB経由で送るメイン
@@ -72,7 +61,7 @@ while True:
         i=0
     else:
         i=i+1
-    if i > 10:
+    if i > 20:
         pkeys=[]
         i=0
     else:
